@@ -7,7 +7,7 @@
 #SBATCH --time=0:30:00
 #SBATCH --partition=owners
 #SBATCH --mail-type=ALL
-#SBATCH --array=0-99
+#SBATCH --array=0-29
 #SBATCH --output=slurm_logs/build-term-centric-networks-%A_%a.out
 
 mkdir -p slurm_logs

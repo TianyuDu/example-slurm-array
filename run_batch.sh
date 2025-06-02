@@ -4,7 +4,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=1G
-#SBATCH --time=2:00:00
+#SBATCH --time=0:30:00
 #SBATCH --partition=owners
 #SBATCH --mail-type=ALL
 #SBATCH --array=0-99

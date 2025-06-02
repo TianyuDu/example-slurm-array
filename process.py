@@ -14,7 +14,7 @@ if __name__ == "__main__":
     SLURM_ARRAY_TASK_COUNT = int(os.environ.get("SLURM_ARRAY_TASK_COUNT", 1))
 
     # Check if expected output files already exist
-    expected_output_file = os.path.join(args.output_path, f"output_file_{SLURM_ARRAY_TASK_ID}_of_{SLURM_ARRAY_TASK_COUNT}.pkl")
+    expected_output_file = os.path.join(args.output_path, f"output_file_{SLURM_ARRAY_TASK_ID}_of_{SLURM_ARRAY_TASK_COUNT}.csv")
 
     if os.path.exists(expected_output_file):
         print(f"[INFO] All expected output files already exist for chunk {SLURM_ARRAY_TASK_ID}. Skipping processing.")
@@ -42,6 +42,3 @@ if __name__ == "__main__":
 
     # save the output data.
     df_input_subset.to_csv(expected_output_file, index=False)
-
-
-
